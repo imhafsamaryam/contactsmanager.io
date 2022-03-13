@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact management app</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="login-page">
+            <div class="form">
+                <form class="register-form" action="register.php" method="post">
+                    <h1>Register </h1>
+                    <input name="email"  type="text" placeholder="Email"/>
+                    <input name="password" type="password" placeholder="Password"/>
+                    <input name="secretcode" type="text" placeholder="Secret Code"/>
+                    <input type="submit">
+                    <p class="message"> Already have an account? <a href="#">Sign in</a> </p>
+                </form>
+                <form class="login-form">
+                    <h1>Sign In </h1>
+                    <input type="text" placeholder="Email"/>
+                    <input type="password" placeholder="Password"/>
+                    <button>Sign In</button>
+                    <p class="message">Don't have an account? <a href="#">Register</a> </p>
+                </form>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height:'toggle', opacity:'toggle'}, "slow");
+            });
+            </script>
+
+    </body>
+</html>
